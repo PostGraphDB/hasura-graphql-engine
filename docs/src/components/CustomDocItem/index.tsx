@@ -4,7 +4,7 @@ import HasuraConBanner from '@site/src/components/HasuraConBanner';
 import GraphQLWithHasuraBanner from '@site/src/components/GraphQLWithHasuraBanner';
 import CustomFooter from '@site/src/components/CustomFooter';
 import styles from './styles.module.scss';
-import {ScrollToFeedbackButton} from "@site/src/components/Feedback/ScrollToFeedbackButton";
+import { ScrollToFeedbackButton } from '@site/src/components/Feedback/ScrollToFeedbackButton';
 
 const CustomDocItem = props => {
   return (
@@ -18,7 +18,7 @@ const CustomDocItem = props => {
       <ActualDocItem {...props} />
       <div className={styles['custom_doc_item_footer']}>
         {/*<PageHelpful />*/}
-        <ScrollToFeedbackButton/>
+        {props.location.pathname != `/docs/latest/index/` && <ScrollToFeedbackButton />}
         <HasuraConBanner {...props} />
         <GraphQLWithHasuraBanner />
         <CustomFooter />
